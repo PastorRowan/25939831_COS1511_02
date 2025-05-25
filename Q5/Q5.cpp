@@ -16,7 +16,7 @@ int getScore() {
     do {
         cout << "Enter test score between 0 and 100: ";
         cin >> s;
-    } while (s >= 0 && s <= 100);
+    } while (s < 0 && s > 100);
 
     return s;
 
@@ -74,8 +74,8 @@ float calcAverage(int arr[], int n) {
     // Subtract the lowest integer from the total
     total -= findLowest(arr, n);
 
-    // Perform implicit float division of the new total and the total number of
-    return float(total) / n - 1;
+    // Perform implicit float division of the new total and the new total number of scores to calculate the average
+    return float(total) / (n - 1);
 
 };
 
@@ -85,11 +85,14 @@ float calcAverage(int arr[], int n) {
  * @post - The class avg is output to the console
  */
 void displayOutput(float avg) {
+
     using namespace std;
+
     // Outputs result to console
     cout
-        << "The classes avg test score is: " << setprecision(2) << fixed << avg;
+        << "After dropping the lowest test score, the test average is " << setprecision(2) << fixed << avg << endl;
     ;
+
 };
 
 // Test solution
@@ -110,13 +113,20 @@ int main() {
         average = 0.f
     ;
 
-    // Formats console
-    cout << endl;
+    // Format console
+    cout
+        << endl
+        << "Q5 output:" << endl
+        << endl
+    ;
 
     // Prompts user to enter scores
     for (int i = 0; i < NUMBER_SCORES; i++) {
         scores[i] = getScore();
     };
+
+    // Format console
+    cout << endl;
 
     // Calculates the average and assigns the value to average
     average = calcAverage(scores, NUMBER_SCORES);

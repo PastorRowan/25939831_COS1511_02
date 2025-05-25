@@ -19,6 +19,7 @@ float computePrice(const char pizzaSize, const unsigned int numToppings = 0) {
         price = 0.f
     ;
 
+    // Calculates price of pizza based on pizzaSize and numToppings
     switch (pizzaSize) {
         case 'S':
             price = 50.f + (5.50f * numToppings);
@@ -43,17 +44,23 @@ int main() {
 
     using namespace std;
 
-    // Output formatting
+    // Format console
+    cout
+        << endl
+        << "Q3 (iv) output:" << endl
+        << endl
+    ;
+
+    // Format console output
     cout.precision(2);
     cout.setf(ios::fixed);
 
     // Output solution to console
     cout
-        << endl
-        << "Price for 'S' pizza with 1 toppings R" << computePrice('S', 1) << endl
-        << "Price for 'M' pizza with 2 toppings R" << computePrice('M', 2) << endl
-        << "Price for 'L' pizza with 3 toppings, uses default numToppings R" << computePrice('L', 3) << endl
-        << "Price for 'M' pizza with 0 toppings, uses default numToppings R" << computePrice('L') << endl
+        << "Price for 'S' pizza with 1 toppings - R" << computePrice('S', 1) << endl
+        << "Price for 'M' pizza with 2 toppings - R" << computePrice('M', 2) << endl
+        << "Price for 'L' pizza with 3 toppings - R" << computePrice('L', 3) << endl
+        << "Price for 'M' pizza with 0 toppings, uses default numToppings - R" << computePrice('L') << endl
     ;
 
     return 0;

@@ -25,9 +25,11 @@ void function1() {
 // Test solution
 int main() {
 
+    // Format console output
     cout
         << endl
-        << "Solution (ii) output:" << endl
+        << "Q2 (i) solution (ii) output:" << endl
+        << endl
     ;
 
     // Calling function1 for testing purposes

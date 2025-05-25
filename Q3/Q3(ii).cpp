@@ -24,8 +24,8 @@ int main() {
 
     // Defining test variables
     const int
-        TEST_NUMBER_1 = 2,
-        TEST_NUMBER_2 = 10
+        TEST_NUMBER_1 = 1,
+        TEST_NUMBER_2 = 2
     ;
 
     int
@@ -36,14 +36,18 @@ int main() {
     // Calling calcSumAndDiff for testing purposes
     calcSumAndDiff(TEST_NUMBER_1, TEST_NUMBER_2, sum, difference);
 
-    // Sum test output
+    // Format console
     cout
         << endl
-        << "sum = " << TEST_NUMBER_1 << " + " << TEST_NUMBER_2 << " = " << sum << endl
+        << "Q3 (ii) output:" << endl
+        << endl
     ;
 
-    // Console formatting
-    cout << endl;
+    // Sum test output
+    cout
+        << "sum = " << TEST_NUMBER_1 << " + " << TEST_NUMBER_2 << " = " << sum << endl
+        << endl
+    ;
 
     // Difference test output
     if (TEST_NUMBER_1 >= TEST_NUMBER_2) {

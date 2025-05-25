@@ -42,7 +42,6 @@ unsigned int calculateVolume(const unsigned int h, const unsigned int w, const u
  * @param w - unsigned integer representing the width of the room
  * @param l - unsigned integer representing the length of the room
  * @param v - unsigned integer representing the length of the room
- * @pre - 
  * @post - height, width, length and volume of the room are output to the console in an organised format
  */
 void displayOutput(const unsigned int h, const unsigned int w, const unsigned int l, const unsigned int v) {
@@ -97,6 +96,12 @@ int main() {
         displayOutput(height, width, length, volume);
 
     };
+
+    // Format console
+    cout
+        << endl
+        << "program finished" << endl
+    ;
 
     return 0;
 

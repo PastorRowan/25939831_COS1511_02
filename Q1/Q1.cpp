@@ -1,4 +1,8 @@
 
+
+/*
+The question specifically indicated only to create the function headers so I did so without the corresponding definitions
+*/
 # include <string>
 
 /**

@@ -81,11 +81,15 @@ int main() {
 
     using namespace std;
 
-    // Console formatting
-    cout << endl;
+    // Format console
+    cout
+        << endl
+        << "Q3 (iii) output:" << endl
+        << endl
+    ;
 
     // Test rectangle
-    rectangle(0, 1);
+    rectangle(4, 3);
 
     return 0;
 
