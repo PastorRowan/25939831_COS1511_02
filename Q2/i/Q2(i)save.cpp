@@ -26,6 +26,18 @@ I will show all of the solutions for error ii
 */
 
 /*
+There is a syntax error.
+Because x, y and z.
+Solution:
+Do x
+Code should look like:
+int exampleFunction() {
+    return 0;
+};
+*/
+
+
+/*
 int function1() {
     cout << "Inside function function1 " << endl;
     int function2() {

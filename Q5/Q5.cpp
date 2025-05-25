@@ -122,6 +122,7 @@ int main() {
 
     // Prompts user to enter scores
     for (int i = 0; i < NUMBER_SCORES; i++) {
+        cout << "Score " << i + 1 << ":";
         scores[i] = getScore();
     };
 

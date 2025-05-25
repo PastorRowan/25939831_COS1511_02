@@ -7,24 +7,25 @@ The question specifically indicated only to create the function headers so I did
 
 /**
  * Check function header
- * @param nInt - Stands for number integer
- * @pre - Actual parameters nInt and nFloat are defined and initialised before funciton call (They were assigned appropriate values)
+ * @param n1 - integer number
+ * @param n2 - float number
+ * @pre - Actual parameters n1 and n2 are defined and assigned values before function call (not undefined)
  * @post - N/A - The function was not defined in the assignment (I don't know if function mutates state outside of the body or what I/O operations
  * it performs
  */
-void check(int nInt, float nFloat);
+void check(int n1, float n2);
 
 /**
  * Multiplies 2 floats and returns the product
  * @param n1 - The first float
  * @param n2 - The Second float
- * @pre - Actual parameters n1 and n2 were defined and initialised before funciton call (They were assigned float values)
+ * @pre - Actual parameters n1 and n2 are defined and assigned values before function call (not undefined)
  * @return - The product of n1 times n2
  */
 float mult(float n1, float n2);
 
 /**
- * Time a recursive function (The prompt did not define a base case or what the function should do so I am just doing what the prompt says)
+ * @brief Time a recursive function
  * @param s - Seconds
  * @param m - Minutes
  * @param h - Hours

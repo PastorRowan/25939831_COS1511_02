@@ -37,13 +37,14 @@ int main() {
         TEST_NUMBER = 2.f
     ;
 
-    // Test console output
+    // Format console
     cout
         << endl
-        << "Output Q2 (iii):" << endl
+        << "Output Q2 (iv):" << endl
         << endl
     ;
 
+    // Test console output
     aFunction(TEST_NUMBER);
 
     return 0;
