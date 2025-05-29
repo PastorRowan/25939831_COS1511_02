@@ -43,11 +43,11 @@ void getData(int& theHeight, int& theWidth, int& theLength) {
 };
 
 /**
- * Calculates the volume of a room
+ * Calculates the integer volume of a room
  * @param h - integer representing the height of the room
  * @param w - integer representing the width of the room
  * @param l - integer representing the length of the room
- * @return - the volume of the room
+ * @return - the integer volume of the room
  */
 int calculateVolume(const int h, const int w, const int l) {
     // Formula for volume

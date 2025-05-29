@@ -1,7 +1,5 @@
-
 #include <iostream>
 #include <string>
-
 /**
  * Prompts user to input height, width and length of the room
  * @param theHeight - integer passed via reference representing the height of the room
@@ -43,7 +41,7 @@ void getData(int& theHeight, int& theWidth, int& theLength) {
 };
 
 /**
- * Calculates the volume of a room
+ * Calculates the integer volume of a room
  * @param h - integer representing the height of the room
  * @param w - integer representing the width of the room
  * @param l - integer representing the length of the room
@@ -81,7 +79,8 @@ void displayOutput(const int h, const int w, const int l, const int v) {
 
     // Outputs text to the console
     cout
-        << "The volume of a room with height " << h << ", width " << w << " and length " << l << endl
+        << "The volume of a room with height " << h << ", width "
+  << w << " and length " << l << endl
         << "is " << v << ". Size: " << size << endl
     ;
 
@@ -124,3 +123,4 @@ int main() {
     return 0;
 
 };
+
