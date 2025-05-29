@@ -25,10 +25,12 @@ void theProduct() {
 
     using namespace std;
 
-    int a;
-    int b;
-    int c;
-    int result;
+    int
+        a,
+        b,
+        c,
+        result
+    ;
 
     cout << “Enter three integers “ << endl;
     cin >> a >> b >> c;
@@ -38,6 +40,8 @@ void theProduct() {
     cout << “Result is “ << result << endl;
 
 };
+
+Note: I rewrote the functions variable declarations to improve readability by removing redundant statements.
 
 */
 
@@ -51,10 +55,12 @@ void theProduct() {
 
     using namespace std;
 
-    int a;
-    int b;
-    int c;
-    int result;
+    int
+        a,
+        b,
+        c,
+        result
+    ;
 
     cout << "Enter three integers " << endl;
     cin >> a >> b >> c;

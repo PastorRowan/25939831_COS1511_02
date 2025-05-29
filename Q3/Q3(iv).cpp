@@ -4,16 +4,17 @@
 /**
  * Calculates the price of a pizza
  * @param pizzaSize - Char S, M or L indicating the correpsonding pizza size
- * @param numToppings - Unsigned integer (can only be postive or 0) indicating the number of pizza topping selections on the pizza
+ * @param numToppings - integer (can only be postive or 0) indicating the number of pizza topping selections on the pizza
  * @return 
- * @note
- * I used an unsigned integer because otherwise I would have to check at runtime for whether someone entered a negative integer
- * by mistake but I realised that if I use an unsigned integer then its impossible and the compiler will complain about using signed integers
- * so this is just a very simple way to prevent negative integer parameters to be entered.
- * Also the pizzaSize should be a char enum type to limit the possible options of what can be entered but the exercise indicated to use
+ * @note pizzaSize should be a char enum type to limit the possible options of what can be entered but the exercise indicated to use
  * a char so I am doing only what I am told
  */
-float computePrice(const char pizzaSize, const unsigned int numToppings = 0) {
+float computePrice(const char pizzaSize, const int numToppings = 0) {
+
+    if (numToppings < 0) {
+        std::cout << "Warning: numToppings is negative, returning 0.f" << std::endl;
+        return 0.f;
+    };
 
     float
         price = 0.f

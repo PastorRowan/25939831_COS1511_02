@@ -4,47 +4,65 @@
 
 /**
  * Prompts user to input height, width and length of the room
- * @param theHeight - unsigned integer passed via reference representing the height of the room
- * @param theWidth - unsigned integer passed via reference representing the width of the room
- * @param theLength - unsigned integer passed via reference representing the length of the room
- * @post theHeight, theWidth and theLength are assigned values based on their corresponding prompts
+ * @param theHeight - integer passed via reference representing the height of the room
+ * @param theWidth - integer passed via reference representing the width of the room
+ * @param theLength - integer passed via reference representing the length of the room
+ * @post theHeight, theWidth and theLength are assigned values based on their corresponding input
  */
-void getData(unsigned int& theHeight, unsigned int& theWidth, unsigned int& theLength) {
+void getData(int& theHeight, int& theWidth, int& theLength) {
 
     using namespace std;
 
-    cout << "Enter the height of the room: ";
-    cin >> theHeight;
+    // Validate height (must be >= 0)
+    do {
+        cout << "Enter the height of the room (non-negative): ";
+        cin >> theHeight;
+        if (theHeight < 0) {
+            cout << "Error: Height cannot be negative. Try again." << endl;
+        };
+    } while (theHeight < 0);
 
-    cout << "Enter the width of the room: ";
-    cin >> theWidth;
+    // Validate width (must be >= 0)
+    do {
+        cout << "Enter the width of the room (non-negative): ";
+        cin >> theWidth;
+        if (theWidth < 0) {
+            cout << "Error: Width cannot be negative. Try again." << endl;
+        };
+    } while (theWidth < 0);
 
-    cout << "Enter the length of the room: ";
-    cin >> theLength;
+    // Validate length (must be >= 0)
+    do {
+        cout << "Enter the length of the room (non-negative): ";
+        cin >> theLength;
+        if (theLength < 0) {
+            cout << "Error: Length cannot be negative. Try again." << endl;
+        };
+    } while (theLength < 0);
 
 };
 
 /**
  * Calculates the volume of a room
- * @param h - unsigned integer representing the height of the room
- * @param w - unsigned integer representing the width of the room
- * @param l - unsigned integer representing the length of the room
+ * @param h - integer representing the height of the room
+ * @param w - integer representing the width of the room
+ * @param l - integer representing the length of the room
  * @return - the volume of the room
  */
-unsigned int calculateVolume(const unsigned int h, const unsigned int w, const unsigned int l) {
+int calculateVolume(const int h, const int w, const int l) {
     // Formula for volume
     return h * w * l;
 };
 
 /**
  * Outputs the height, width, length and volume of the room are output to the console in an organised format
- * @param h - unsigned integer representing the height of the room
- * @param w - unsigned integer representing the width of the room
- * @param l - unsigned integer representing the length of the room
- * @param v - unsigned integer representing the length of the room
+ * @param h - integer representing the height of the room
+ * @param w - integer representing the width of the room
+ * @param l - integer representing the length of the room
+ * @param v - integer representing the length of the room
  * @post - height, width, length and volume of the room are output to the console in an organised format
  */
-void displayOutput(const unsigned int h, const unsigned int w, const unsigned int l, const unsigned int v) {
+void displayOutput(const int h, const int w, const int l, const int v) {
 
     using namespace std;
 
@@ -74,7 +92,7 @@ int main() {
 
     using namespace std;
 
-    unsigned int
+    int
         height = 0,
         width = 0,
         length = 0,

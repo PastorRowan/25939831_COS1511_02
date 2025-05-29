@@ -51,7 +51,7 @@ int main() {
 
     // Test console output
     cout
-        << "(" << TEST_NUMBER << ")^2 = " << TEST_NUMBER << " x " << TEST_NUMBER << " = " << calculateSquare(TEST_NUMBER)
+        << "(" << TEST_NUMBER << ")^2 = " << TEST_NUMBER << " x " << TEST_NUMBER << " = " << calculateSquare(TEST_NUMBER) << endl
     ;
 
     return 0;

@@ -24,7 +24,7 @@ int getScore() {
 
 /**
  * @param arr - An array of integers
- * @param n - The number of elements that will be iterated over from index 0 to index n - 1
+ * @param n - The number of elements of the array
  * @pre - The arr is defined and assigned values for all 0 to n - 1 elements
  * @return - The lowest value integer found
  */
@@ -35,7 +35,7 @@ int findLowest(int arr[], int n) {
         min = arr[0]
     ;
 
-    // Iterates over n elements from index 0 to index n - 1 and assigns the minimum value found to min
+    // Iterates over n elements from index 1 to index n - 1 and assigns a value lower than min to the current element
     for (int i = 1; i < n; i++) {
         if (arr[i] < min) {
             min = arr[i];
@@ -90,7 +90,7 @@ void displayOutput(float avg) {
 
     // Outputs result to console
     cout
-        << "After dropping the lowest test score, the test average is " << setprecision(2) << fixed << avg << endl;
+        << "After dropping the lowest test score, the test average is " << setprecision(2) << fixed << avg << endl
     ;
 
 };
@@ -122,7 +122,7 @@ int main() {
 
     // Prompts user to enter scores
     for (int i = 0; i < NUMBER_SCORES; i++) {
-        cout << "Score " << i + 1 << ":";
+        cout << "Score " << i + 1 << ":" << endl;
         scores[i] = getScore();
     };
 

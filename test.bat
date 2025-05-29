@@ -7,3 +7,5 @@ call compile.bat
 
 :: Run the test suite
 call __tests__\main.bat
+
+cd /d %~dp0

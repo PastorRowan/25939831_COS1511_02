@@ -85,7 +85,7 @@ int main() {
     };
 
     // Tests final console output
-    cout << " = " << computeProd(5);
+    cout << " = " << computeProd(5) << endl;
 
     return 0;
 

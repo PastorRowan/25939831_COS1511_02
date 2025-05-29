@@ -58,6 +58,7 @@ void displayData(const string n, const string a1, const string a2, const string 
 
     using namespace std;
 
+    // Displays data in format
     cout
         << n << endl
         << a1 << endl
@@ -89,6 +90,9 @@ int main() {
 
     // Prompts user to enter address data
     inputData(name, addr1, addr2, postalCode);
+
+    // Format console
+    cout << endl;
 
     // Outputs data to console
     displayData(name, addr1, addr2, postalCode);

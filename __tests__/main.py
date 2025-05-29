@@ -7,19 +7,13 @@ import os
 runs = [
 
     # Run 1
-    [ 65, 24, 80, 73, 51, ],
-
-    # Run 2
-    [ 66, 38, 84, 69, 59, ],
-
-    # Run 3
-    [ 72, 52, 81, 23, 53, ],
-
-    # Run 4
-    [ 65, 28, 72, 63, 65, ],
-
-    #Run 5
-    [ 65, 55, 75, 68, 62, ],
+    [
+        3, 4, 5,
+        10, 14, 12,
+        8, 7, 7,
+        12, 14, 8,
+        15, 8, 12,
+    ]
 
 ]
 
@@ -30,12 +24,12 @@ time.sleep(2)
 parent_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
 
 for i, run in enumerate(runs):
-    print("\n\nRun " + str(i + 1))
+    # print("\n\nRun " + str(i + 1))
 
    # Run the batch file asynchronously (non-blocking)
     subprocess.Popen(["run.bat"], shell=True, cwd=parent_dir)
 
-    time.sleep(2)
+    time.sleep(1)
 
     for inp in run:
         keyboard.write(str(inp) + "\n")
@@ -45,5 +39,3 @@ for i, run in enumerate(runs):
         # after the print statements and not in the expected order.
         # I don't understand why this is the case but it is for some reason it is.
         time.sleep(0.5)
-
-print("\n\nfinished")
